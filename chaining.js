@@ -13,5 +13,31 @@ all the resulting numbers.
 */
 
 
+// Sort Descending - http://www.w3schools.com/jsref/jsref_sort.asp
+
+// Filter - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+// Multiply -
 
 var integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
+
+function bigEnough(value){
+    return value > 19
+}
+
+function multi (value) {
+    return (value * 1.5) - 1
+}
+
+
+integers.sort(function(a, b){return b-a})
+
+console.log("ints sorted", integers.join(', '));
+
+integers = integers.filter(bigEnough)
+
+console.log("ints filtered", integers.join(', '))
+
+integers = integers.forEach(multi)
+
+console.log("ints multi", integers.join(', '))
